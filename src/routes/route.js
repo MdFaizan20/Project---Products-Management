@@ -27,7 +27,7 @@ const {authentication,authorization} =require("../middleware/auth")
  router.delete("/users/:userId/cart",cartController.cartDeletion)
 
  router.post("/users/:userId/orders",authentication,authorization,orderController.orderCreation)
- router.put("/users/:userId/orders",orderController.updateOrder)
+ router.put("/users/:userId/orders",authentication,authorization,orderController.updateOrder)
 
 
  

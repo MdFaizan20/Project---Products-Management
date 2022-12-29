@@ -215,7 +215,7 @@ const createCart = async function (req, res) {
   
       const checkUser = await userModel.findOne({ _id: userId });
       if (!checkUser) {
-        return res.satus(404).send({ status: false, msg: "User doesn't esxist" });
+        return res.status(404).send({ status: false, msg: "User doesn't esxist" });
       }
     
       const checkCart = await cartModel.find({ userId: userId });
